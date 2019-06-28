@@ -1,6 +1,6 @@
 *** Variables ***
 
-${count} =   ${10000}       # use a multiple of 20
+${count} =   ${50000}       # use a multiple of 20
                 # half (called num_records below) will be "matching" import records
                 # half (num_records) will be "not matching"
                 #
