@@ -1,6 +1,6 @@
 *** Variables ***
 
-${count} =   ${200000}       # use a multiple of 20
+${count} =   ${600000}       # use a multiple of 20
                 # half (called num_records below) will be "matching" import records
                 # half (num_records) will be "not matching"
                 #
@@ -16,7 +16,7 @@ Suite Setup       Run Task Class   tasks.generate_bdi_data.GenerateBDIData
 
 *** Test Cases ***
 
-Import a data batch via the API 200000
+Import a data batch via the API 600000
     Batch Data Import   1000
     @{result} =   Salesforce Query  npsp__DataImport__c  select=COUNT(Id)
     Should Be Equal     ${result}[0][expr0]     ${count}
